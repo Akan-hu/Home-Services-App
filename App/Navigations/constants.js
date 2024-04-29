@@ -1,0 +1,7 @@
+export const HOME = 'Home'
+export const PROFILE = 'Profile'
+export const BOOKING_SCREEN = 'Booking'
+export const BUSINESS_LIST_BY_CATEGORY = 'BusinessListByCategory'
+export const HOME_NAVIGATION = 'HomeNavigation'
+export const BUSINESS_DETAIL = 'BusinessDetail'
+export const MAIN_HOME = 'MainHome'
