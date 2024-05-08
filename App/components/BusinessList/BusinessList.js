@@ -18,7 +18,7 @@ const BusinessList = () => {
   }, [])
 
   return (
-    <View>
+    <View style={{ marginHorizontal: 15 }}>
       <HeaderTitle title={'Latest Services'} />
       <FlatList
         data={data}

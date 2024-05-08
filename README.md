@@ -14,12 +14,19 @@ The Home Services App is a platform where users can easily book various home ser
 To get started with the Home Services App, follow these steps:
 1. Create a expo managed code 
 #  npm create expo-app HomeServices
-1. Clone this repository to your local machine.
-2. Install the necessary dependencies.
+
+2. Clone this repository to your local machine.
+
+3. Install the necessary dependencies.
 #  adding clerk to app for google authentication
-   https://clerk.com/docs/quickstarts/expo
+  * clerk documentation   https://clerk.com/docs/quickstarts/expo
+  * adding expo-web-browser   https://docs.expo.dev/versions/latest/sdk/webbrowser/
+  * adding auth token to keep user signin or to cache user signin information
+    https://clerk.com/docs/quickstarts/expo#adding-a-token-cache
+
+
 #   adding graphql dependency for query and mutation with hygraph  
    https://www.npmjs.com/package/graphql
-3. Run the app locally or deploy it to a server.
+4. Run the app locally or deploy it to a server.
 
 

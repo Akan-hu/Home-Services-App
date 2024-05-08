@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   paginationDots: {
     height: 8,
     margin: 8,
-    flexDirection: !isIOS() ? 'row-reverse' : 'row',
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },

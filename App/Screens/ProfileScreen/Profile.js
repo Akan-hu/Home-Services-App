@@ -11,9 +11,11 @@ import { isIOS } from '../../Utils/Constants'
 import { Ionicons } from '@expo/vector-icons'
 
 import { PRIMARY } from '../../Utils/Constants/colors'
-import { useUser } from '@clerk/clerk-expo'
+import { useUser, useAuth } from '@clerk/clerk-expo'
+
 const Profile = () => {
   const { user } = useUser()
+  const { isLoaded, signOut } = useAuth()
   const profileMenu = [
     {
       id: 1,
@@ -36,7 +38,16 @@ const Profile = () => {
       icon: 'log-out',
     },
   ]
-  const handlePress = (id) => {}
+  const SignOut = () => {
+    if (!isLoaded) {
+      return null
+    }
+  }
+  const handlePress = (id) => {
+    if (id === 3) {
+      signOut()
+    }
+  }
   return (
     <View>
       <View style={style.headerView}>

@@ -29,7 +29,7 @@ const Categories = () => {
     setViewAll(true) // Update state to show all categories
   }
   return (
-    <View>
+    <View style={{ marginHorizontal: 15 }}>
       <HeaderTitle
         title={'Categories'}
         seeAllReq={true}
