@@ -5,17 +5,22 @@ import {
   Image,
   FlatList,
   TouchableOpacity,
+  Linking,
 } from 'react-native'
 import React from 'react'
-import { isIOS } from '../../Utils/Constants'
+import { PHONE_NUMBER, callNumber, isIOS } from '../../Utils/Constants'
 import { Ionicons } from '@expo/vector-icons'
 
 import { PRIMARY } from '../../Utils/Constants/colors'
 import { useUser, useAuth } from '@clerk/clerk-expo'
+import { useNavigation } from '@react-navigation/native'
+import HomeNavigation from '../../Navigations/HomeNavigation'
+import { BOOKING_SCREEN, MAIN_HOME } from '../../Navigations/constants'
 
 const Profile = () => {
   const { user } = useUser()
   const { isLoaded, signOut } = useAuth()
+  const navigation = useNavigation()
   const profileMenu = [
     {
       id: 1,
@@ -38,14 +43,34 @@ const Profile = () => {
       icon: 'log-out',
     },
   ]
-  const SignOut = () => {
-    if (!isLoaded) {
-      return null
+
+  if (!isLoaded) {
+    return null
+  }
+  const userLogout = async () => {
+    try {
+      await signOut()
+    } catch (e) {
+      console.log(e)
     }
   }
+
   const handlePress = (id) => {
-    if (id === 3) {
-      signOut()
+    switch (id) {
+      case 0:
+        navigation?.navigate(MAIN_HOME)
+        break
+      case 1:
+        navigation?.navigate(BOOKING_SCREEN)
+        break
+      case 2:
+        callNumber(PHONE_NUMBER)
+        break
+      case 3:
+        userLogout()
+        break
+      default:
+        null
     }
   }
   return (

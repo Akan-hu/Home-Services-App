@@ -8,6 +8,7 @@ import { Entypo, FontAwesome } from '@expo/vector-icons'
 import BookingScreen from '../Screens/BookingScreen/BookingScreen'
 import { PRIMARY } from '../Utils/Constants/colors'
 import HomeNavigation from './HomeNavigation'
+import { isIOS } from '../Utils/Constants'
 
 const Tab = createBottomTabNavigator()
 const TabNavigations = () => {
@@ -23,7 +24,14 @@ const TabNavigations = () => {
         component={HomeNavigation}
         options={{
           tabBarLabel: ({ color }) => (
-            <Text style={{ color: color, fontSize: 12, marginTop: -7 }}>
+            <Text
+              style={{
+                color: color,
+                fontSize: 12,
+                marginTop: -7,
+                padding: 3,
+              }}
+            >
               Home
             </Text>
           ),
@@ -37,7 +45,9 @@ const TabNavigations = () => {
         component={BookingScreen}
         options={{
           tabBarLabel: ({ color }) => (
-            <Text style={{ color: color, fontSize: 12, marginTop: -7 }}>
+            <Text
+              style={{ color: color, fontSize: 12, marginTop: -7, padding: 3 }}
+            >
               Booking
             </Text>
           ),
@@ -51,7 +61,9 @@ const TabNavigations = () => {
         component={Profile}
         options={{
           tabBarLabel: ({ color }) => (
-            <Text style={{ color: color, fontSize: 12, marginTop: -7 }}>
+            <Text
+              style={{ color: color, fontSize: 12, marginTop: -7, padding: 3 }}
+            >
               Profile
             </Text>
           ),

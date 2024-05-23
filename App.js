@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, View } from 'react-native'
+import { LogBox, StyleSheet, View } from 'react-native'
 import Login from './App/Screens/LoginScreen/Login'
 import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-expo'
 import * as SecureStore from 'expo-secure-store'
@@ -9,7 +9,9 @@ import { useFonts } from 'expo-font'
 import 'react-native-gesture-handler'
 import Toast from 'react-native-toast-message'
 import ToastMessage from './App/components/ToastMessage/ToastMessage'
-
+import { Provider } from 'react-redux'
+import { store } from './App/redux/store/store'
+LogBox.ignoreAllLogs()
 const tokenCache = {
   async getToken(key) {
     try {
@@ -42,26 +44,28 @@ export default function App() {
   }
 
   return (
-    <ClerkProvider
-      publishableKey="pk_test_ZmxlZXQtdGljay00MS5jbGVyay5hY2NvdW50cy5kZXYk"
-      tokenCache={tokenCache}
-    >
-      <View style={styles.container}>
-        {/** This component render when user is signed in */}
-        <SignedIn>
-          <NavigationContainer>
-            <TabNavigations />
-          </NavigationContainer>
-        </SignedIn>
-        {/** This component render when user is not signed in */}
-        <SignedOut>
-          <Login />
-        </SignedOut>
-        <StatusBar style="auto" />
-        {/** Add Toast component here */}
-        <Toast config={toastConfig} />
-      </View>
-    </ClerkProvider>
+    <Provider store={store}>
+      <ClerkProvider
+        publishableKey="pk_test_ZmxlZXQtdGljay00MS5jbGVyay5hY2NvdW50cy5kZXYk"
+        tokenCache={tokenCache}
+      >
+        <View style={styles.container}>
+          {/** This component render when user is signed in */}
+          <SignedIn>
+            <NavigationContainer>
+              <TabNavigations />
+            </NavigationContainer>
+          </SignedIn>
+          {/** This component render when user is not signed in */}
+          <SignedOut>
+            <Login />
+          </SignedOut>
+          <StatusBar style="auto" />
+          {/** Add Toast component here */}
+          <Toast config={toastConfig} />
+        </View>
+      </ClerkProvider>
+    </Provider>
   )
 }
 

@@ -11,6 +11,7 @@ const Home = () => {
   useEffect(() => {
     GlobalApi.getSlider().then((res) => setLoading(false))
   }, [])
+
   return (
     <View style={{ flex: 1 }}>
       <Header />

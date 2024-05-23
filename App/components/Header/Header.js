@@ -1,11 +1,14 @@
-import { View, Text, Image, StyleSheet, TextInput } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useUser } from '@clerk/clerk-expo'
 import { PRIMARY } from '../../Utils/Constants/colors'
 import { FontAwesome } from '@expo/vector-icons'
 import { isIOS } from '../../Utils/Constants'
+import { useNavigation } from '@react-navigation/native'
+import { SEARCH_SCREEN } from '../../Navigations/constants'
 const Header = () => {
   const { user } = useUser()
+  const navigation = useNavigation()
   return (
     user && (
       <View style={style.viewMain}>
@@ -20,7 +23,12 @@ const Header = () => {
           <FontAwesome name="bookmark-o" size={27} color="white" />
         </View>
         <View style={style.searchView}>
-          <TextInput placeholder="Search" style={style.inputStyle} />
+          <TouchableOpacity
+            style={style.searchBtn}
+            onPress={() => navigation?.navigate(SEARCH_SCREEN)}
+          >
+            <Text style={style.searchText}>Search service here..</Text>
+          </TouchableOpacity>
           <View style={style.search}>
             <FontAwesome name="search" size={24} color="black" />
           </View>
@@ -38,19 +46,21 @@ const style = StyleSheet.create({
     padding: isIOS() ? 10 : 7,
     borderRadius: 10,
   },
-  searchView: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  inputStyle: {
+  searchBtn: {
     backgroundColor: 'white',
-    padding: isIOS() ? 14 : 5,
+    padding: isIOS() ? 13 : 10,
     paddingLeft: 10,
     marginTop: 10,
     flex: 1,
     fontSize: 16,
     borderRadius: 10,
   },
+  searchView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 5,
+  },
+  searchText: { marginLeft: 10, fontSize: 16, color: 'grey' },
   container1: {
     flexDirection: 'row',
   },

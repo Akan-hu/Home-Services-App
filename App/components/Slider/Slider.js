@@ -1,4 +1,4 @@
-import { View, StyleSheet, FlatList, Image } from 'react-native'
+import { View, StyleSheet, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import GlobalApi from '../../Utils/Api/GlobalApi'
 import { getDeviceHeight, getDeviceWidth } from '../../Utils/Constants'
