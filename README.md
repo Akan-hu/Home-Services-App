@@ -27,7 +27,7 @@ To get started with the Home Services App, follow these steps:
 
 #   adding graphql dependency for query and mutation with hygraph  
    https://www.npmjs.com/package/graphql
-4. Run the app locally or deploy it to a server.
+
 
 
 
@@ -46,8 +46,9 @@ To get started with the Home Services App, follow these steps:
 ![WhatsApp Image 2024-05-24 at 7 53 54 PM](https://github.com/Akan-hu/Home-Services-App/assets/114865006/075e4771-bdaa-4d97-9498-eee528999508)
 
 
+![WhatsApp Image 2024-05-24 at 7 53 55 PM](https://github.com/Akan-hu/Home-Services-App/assets/114865006/6a6f7850-a9c6-4911-997b-dacc7c05bf9f)
 
-![WhatsApp Image 2024-05-24 at 7 53 54 PM](https://github.com/Akan-hu/Home-Services-App/assets/114865006/662633e7-e431-4309-84e9-0319bc120e1a)
+
 
 
 
