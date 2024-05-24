@@ -30,3 +30,24 @@ To get started with the Home Services App, follow these steps:
 4. Run the app locally or deploy it to a server.
 
 
+
+![WhatsApp Image 2024-05-24 at 7 53 55 PM (2)](https://github.com/Akan-hu/Home-Services-App/assets/114865006/39e8b108-4d0a-451b-8638-7283836e9543)
+
+
+
+![WhatsApp Image 2024-05-24 at 7 53 54 PM (1)](https://github.com/Akan-hu/Home-Services-App/assets/114865006/ddd90621-21cc-4135-9a2a-55e2af8b9ea1)
+
+
+
+![WhatsApp Image 2024-05-24 at 7 53 55 PM (1)](https://github.com/Akan-hu/Home-Services-App/assets/114865006/22ded41f-2e71-4b36-8196-217f4066bcaa)
+
+
+
+![WhatsApp Image 2024-05-24 at 7 53 54 PM](https://github.com/Akan-hu/Home-Services-App/assets/114865006/075e4771-bdaa-4d97-9498-eee528999508)
+
+
+
+![WhatsApp Image 2024-05-24 at 7 53 54 PM](https://github.com/Akan-hu/Home-Services-App/assets/114865006/662633e7-e431-4309-84e9-0319bc120e1a)
+
+
+
